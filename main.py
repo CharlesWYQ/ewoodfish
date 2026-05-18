@@ -7,12 +7,14 @@
 # @Details : 
 
 
-# app.py（完整版）
+# app.py
+from werkzeug.middleware.proxy_fix import ProxyFix
 from flask import Flask, request, jsonify, send_from_directory
 import sqlite3
 import os
 
 app = Flask(__name__, static_folder='static')
+app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1)
 db_path = 'data/fish_click.db'
 
 
