@@ -26,7 +26,7 @@ let count_amount = localStorage.getItem("ewoodfish_count") || 0;
 $(".count_amount").html(count_amount);
 let countFlag = false;
 
-fetch('/api/count')
+fetch('api/count')
     .then(res => res.json())
     .then(data => {
         let totalCount = data.total_clicks;
@@ -44,7 +44,7 @@ function initAnimate() {
 }
 
 function click() {
-    fetch('/api/click', {method: 'POST'})
+    fetch('api/click', {method: 'POST'})
         .then(res => res.json())
         .then(data => {
             totalCount = data.total_clicks;

@@ -2,7 +2,7 @@
 FROM python:3.13-slim
 
 # 安装依赖 & 创建用户
-RUN addgroup --system app && adduser --system --ingroup app ewoodfish
+RUN addgroup --system app && adduser --system --ingroup app ewoodfishs
 
 WORKDIR /ewoodfish
 
