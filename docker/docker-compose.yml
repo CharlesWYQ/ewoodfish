@@ -10,7 +10,7 @@ services:
       - "8000:8000"          # 宿主机:容器
     volumes:
       - ../data:/ewoodfish/data
-    user: "${UID:-1000}:${GID:-1000}"
+    user: "${UID}:${GID}"
     restart: unless-stopped
     environment:
       - PYTHONUNBUFFERED=1   # 实时输出日志

@@ -2,16 +2,17 @@
 FROM python:3.13-slim
 
 # 安装依赖 & 创建用户
-RUN addgroup --system app && adduser --system --ingroup app ewoodfishs
+RUN addgroup --system app
+RUN adduser --system --ingroup app --no-create-home --disabled-password ewoodfish
 
 WORKDIR /ewoodfish
 
 # 复制依赖并安装
-COPY --chown=app:ewoodfish requirements.txt .
+COPY --chown=ewoodfish:app requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple/
 
 # 复制应用代码
-COPY --chown=app:ewoodfish . .
+COPY --chown=ewoodfish:app . .
 
 # 切换非 root 用户
 USER ewoodfish
