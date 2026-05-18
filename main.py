@@ -14,7 +14,7 @@ import sqlite3
 import os
 
 app = Flask(__name__, static_folder='static')
-app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1)
+app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1)
 db_path = 'data/fish_click.db'
 
 
