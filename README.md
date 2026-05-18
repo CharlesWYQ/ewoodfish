@@ -22,7 +22,7 @@
 ### 部署步骤
 
 ```bash
-# 1. 克隆项目（或复制你的前端到 static/）
+# 1. 克隆项目
 git clone https://github.com/CharlesWYQ/ewoodfish.git
 cd ewoodfish
 
