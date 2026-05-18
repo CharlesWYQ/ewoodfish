@@ -27,6 +27,6 @@ git clone https://github.com/CharlesWYQ/ewoodfish.git
 cd ewoodfish
 
 # 2. 启动服务
-docker compose -f docker/docker-compose.yml up -d --build
+docker compose -f docker/docker-compose.yml up -d
 
 # 3. 访问 http://localhost:8000
