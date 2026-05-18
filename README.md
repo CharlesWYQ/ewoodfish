@@ -2,7 +2,7 @@
 
 一个基于 Web 的电子木鱼，支持**所有用户共享点击计数**，使用 Flask + Gunicorn + SQLite 构建，支持 Docker 一键部署。
 
-![Wooden Fish Demo](https://via.placeholder.com/600x300?text=Electronic+Wooden+Fish+Demo) <!-- 可替换为实际截图 -->
+![shortcut](shortcut.png)
 
 ## ✨ 特性
 
