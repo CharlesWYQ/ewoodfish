@@ -1,0 +1,16 @@
+# docker/docker-compose.yml
+services:
+  ewoodfish:
+    container_name: ewoodfish
+    build:
+      context: ..
+      dockerfile: ./docker/Dockerfile
+    image: wangyuqing/ewoodfish:1.0
+    ports:
+      - "8000:8000"          # 宿主机:容器
+    volumes:
+      - ../data:/ewoodfish/data         # 持久化 fish.db
+    user: "${UID:-1000}:${GID:-1000}"
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1   # 实时输出日志
