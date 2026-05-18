@@ -29,4 +29,6 @@ cd ewoodfish
 # 2. 启动服务
 docker compose -f docker/docker-compose.yml up -d
 
-# 3. 访问 http://localhost:8000
+# 3. 访问网页
+http://localhost:8000
+```
