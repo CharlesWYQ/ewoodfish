@@ -5,7 +5,6 @@ services:
     build:
       context: ..
       dockerfile: ./docker/Dockerfile
-    image: wangyuqing/ewoodfish:1.0
     ports:
       - "8000:8000"          # 宿主机:容器
     volumes:
